@@ -359,7 +359,7 @@ function updateCartSummary() {
 }
 
 function proceedToCheckout() {
-    if (cart.items.length > 0) {
+    if (cart.items.length >= 0) {
         window.location.href = 'checkout.html';
     } else {
         alert('Your cart is empty!');
