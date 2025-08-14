@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - ShopEase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>ShopEase</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Details -->
+    <section class="product-details section-p1">
+        <div class="product-container">
+            <div class="product-image">
+                <img id="product-image" src="" alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h1 id="product-name"></h1>
+                <div class="product-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>(4.5/5)</span>
+                </div>
+                <div class="product-price">
+                    <span class="price" id="product-price"></span>
+                    <span class="original-price" id="original-price"></span>
+                </div>
+                <div class="product-description" id="product-description">
+                    <!-- Description will be loaded by JavaScript -->
+                </div>
+                <div class="product-options">
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity:</label>
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity()">-</button>
+                            <input type="number" id="quantity" value="1" min="1" max="99">
+                            <button onclick="increaseQuantity()">+</button>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="proceedToCheckout()">
+                        <i class="fas fa-shopping-cart"></i> Checkout 
+                    </button>
+                </div>
+                <div class="product-meta">
+                    <p><strong>Category:</strong> <span id="product-category"></span></p>
+                    <p><strong>Availability:</strong> <span class="in-stock">In Stock</span></p>
+                    <p><strong>SKU:</strong> <span id="product-sku"></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products section-p1">
+        <h2>Related Products</h2>
+        <div class="product-grid" id="related-products">
+            <!-- Related products will be loaded by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ShopEase</h3>
+                <p>Your one-stop destination for quality products.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: info@shopease.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ShopEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

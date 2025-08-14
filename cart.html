@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ShopEase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>ShopEase</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-icon active"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Header -->
+    <section class="cart-header section-p1">
+        <h1>Shopping Cart</h1>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="cart-content section-p1">
+        <div class="cart-container">
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be loaded by JavaScript -->
+            </div>
+            <div class="cart-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-item">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Shipping:</span>
+                    <span id="shipping">$0.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Tax:</span>
+                    <span id="tax">$0.00</span>
+                </div>
+                <div class="summary-item total">
+                    <span>Total:</span>
+                    <span id="total">$0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="proceedToCheckout()">
+                    Proceed to Checkout
+                </button>
+                <button class="continue-shopping" onclick="location.href='shop.html'">
+                    Continue Shopping
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empty Cart Message -->
+    <div class="empty-cart" id="empty-cart" style="display: none;">
+        <div class="empty-cart-content">
+            <i class="fas fa-shopping-cart"></i>
+            <h2>Your cart is empty</h2>
+            <p>Looks like you haven't added any products to your cart yet.</p>
+            <a href="shop.html" class="cta-button">Start Shopping</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ShopEase</h3>
+                <p>Your one-stop destination for quality products.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: info@shopease.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ShopEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

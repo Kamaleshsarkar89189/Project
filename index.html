@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Your Online Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>ShopEase</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to ShopEase</h1>
+            <p>Discover amazing products at unbeatable prices</p>
+            <a href="shop.html" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories section-p1">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+            <div class="category-card" onclick="location.href='shop.html#electronics'">
+                <i class="fas fa-laptop"></i>
+                <h3>Electronics</h3>
+                <p>Latest gadgets and tech</p>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html#clothing'">
+                <i class="fas fa-tshirt"></i>
+                <h3>Clothing</h3>
+                <p>Trendy fashion items</p>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html#home'">
+                <i class="fas fa-home"></i>
+                <h3>Home & Garden</h3>
+                <p>Beautiful home decor</p>
+            </div>
+            <div class="category-card" onclick="location.href='shop.html#sports'">
+                <i class="fas fa-dumbbell"></i>
+                <h3>Sports & Fitness</h3>
+                <p>Stay active and healthy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured section-p1">
+        <h2>Featured Products</h2>
+        <div class="product-grid" id="featured-products">
+            <!-- Products will be loaded by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ShopEase</h3>
+                <p>Your one-stop destination for quality products.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: info@shopease.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ShopEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

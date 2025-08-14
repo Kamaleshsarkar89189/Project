@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - ShopEase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>ShopEase</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Shop Header -->
+    <section class="shop-header section-p1">
+        <h1>Our Products</h1>
+        <div class="shop-filters">
+            <select id="category-filter">
+                <option value="">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="home">Home & Garden</option>
+                <option value="sports">Sports & Fitness</option>
+            </select>
+            <select id="sort-filter">
+                <option value="name">Sort by Name</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products section-p1">
+        <div class="product-grid" id="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2022/10/06/21/49/headphones-7503631_1280.jpg" alt="Wireless Bluetooth Headphones" onclick="viewProduct(1)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Wireless Bluetooth Headphones</h3>
+                    <div class="product-price">
+                        <span class="price">$89.99</span>
+                        <span class="original-price">$129.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(1)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2023/10/07/14/24/smartwatch-8300238_1280.jpg" alt="Smart Fitness Watch" onclick="viewProduct(2)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Smart Fitness Watch</h3>
+                    <div class="product-price">
+                        <span class="price">$199.99</span>
+                        <span class="original-price">$249.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(2)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2024/04/29/04/21/tshirt-8726716_1280.jpg" alt="Organic Cotton T-Shirt" onclick="viewProduct(3)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Organic Cotton T-Shirt</h3>
+                    <div class="product-price">
+                        <span class="price">$24.99</span>
+                        <span class="original-price">$34.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(3)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2017/03/27/14/18/coffee-2179028_1280.jpg" alt="Modern Coffee Table" onclick="viewProduct(4)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Modern Coffee Table</h3>
+                    <div class="product-price">
+                        <span class="price">$299.99</span>
+                        <span class="original-price">$399.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(4)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://media.istockphoto.com/id/906347962/photo/gaming-laptop-with-connected-mouse-and-headphones.jpg?s=612x612&w=is&k=20&c=7bmaEklz99c53pIFav_a3C_WZ-Cws46doLdefSnHq2w=" alt="Gaming Laptop" onclick="viewProduct(5)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Gaming Laptop</h3>
+                    <div class="product-price">
+                        <span class="price">$1299.99</span>
+                        <span class="original-price">$1499.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(5)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2019/11/24/18/48/yoga-4650150_1280.jpg" alt="Yoga Mat Premium" onclick="viewProduct(6)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Yoga Mat Premium</h3>
+                    <div class="product-price">
+                        <span class="price">$49.99</span>
+                        <span class="original-price">$69.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(6)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2025/04/23/07/30/jeans-trousers-9551973_1280.jpg" alt="Denim Jeans Classic" onclick="viewProduct(7)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Denim Jeans Classic</h3>
+                    <div class="product-price">
+                        <span class="price">$79.99</span>
+                        <span class="original-price">$99.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(7)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2022/07/13/02/46/abstract-7318436_1280.jpg" alt="Wall Art Canvas" onclick="viewProduct(8)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Wall Art Canvas</h3>
+                    <div class="product-price">
+                        <span class="price">$89.99</span>
+                        <span class="original-price">$119.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(8)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/01/17/11/cp-1788949_1280.jpg" alt="Wireless Mouse" onclick="viewProduct(9)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Wireless Mouse</h3>
+                    <div class="product-price">
+                        <span class="price">$39.99</span>
+                        <span class="original-price">$59.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(9)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://media.istockphoto.com/id/1258110890/photo/indian-made-mens-sports-shoes-isolated-on-gray.jpg?s=1024x1024&w=is&k=20&c=VDgzLyEd2oFuBsdnOdNxMsCQCX2Ms3dEWHS4psrp0ks=" alt="Running Shoes" onclick="viewProduct(10)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Running Shoes</h3>
+                    <div class="product-price">
+                        <span class="price">$119.99</span>
+                        <span class="original-price">$149.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(10)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 11 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://media.istockphoto.com/id/954699820/photo/hacker-standing-alone.jpg?s=1024x1024&w=is&k=20&c=TqaxkAEzBRMGgXLu5LMxU1xxunpQx3qeh6aRlCyuIYY=" alt="Hoodie Sweatshirt" onclick="viewProduct(11)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Hoodie Sweatshirt</h3>
+                    <div class="product-price">
+                        <span class="price">$59.99</span>
+                        <span class="original-price">$79.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(11)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2019/06/01/11/04/plant-4243898_1280.jpg" alt="Table Lamp Modern" onclick="viewProduct(12)">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Table Lamp Modern</h3>
+                    <div class="product-price">
+                        <span class="price">$69.99</span>
+                        <span class="original-price">$89.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart(12)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ShopEase</h3>
+                <p>Your one-stop destination for quality products.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: info@shopease.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ShopEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
