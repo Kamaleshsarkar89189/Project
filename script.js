@@ -176,6 +176,7 @@ class Cart {
                 item.quantity = quantity;
                 this.saveCart();
                 this.updateCartSummary();
+                loadCartItems(); 
             }
         }
     }
