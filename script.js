@@ -587,12 +587,21 @@ document.addEventListener('DOMContentLoaded', function() {
             break;
         case 'shop.html':
             loadProducts();
-            // Add event listeners for filters
             const categoryFilter = document.getElementById('category-filter');
             const sortFilter = document.getElementById('sort-filter');
-            if (categoryFilter) categoryFilter.addEventListener('change', filterProducts);
+
+            if (categoryFilter) {
+                categoryFilter.addEventListener('change', filterProducts);
+                // set from hash if exists
+                const hashCategory = window.location.hash.substring(1);
+                if (hashCategory) {
+                    categoryFilter.value = hashCategory;
+                    filterProducts();
+                }
+            }
             if (sortFilter) sortFilter.addEventListener('change', filterProducts);
             break;
+
         case 'product.html':
             loadProductDetails();
             break;
